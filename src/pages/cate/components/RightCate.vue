@@ -3,7 +3,7 @@
     <van-grid :column-num="3">
       <van-grid-item
         :key="item._id"
-        :icon="item.img"
+        :icon='`http://localhost:9999${item.img}`'
         :text="item.name"
         v-for="item in list"
       />

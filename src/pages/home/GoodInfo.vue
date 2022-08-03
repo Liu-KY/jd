@@ -4,7 +4,7 @@
     <QfNavbar>
       <div></div>
     </QfNavbar>
-    <van-image :src="info.img" />
+    <van-image :src='`http://localhost:9999${info.img}`' />
     <div v-if='show'>{{ info.price | Rmb }}</div>
     <div v-if='show'>{{ info.name }}</div>
     <GoodsAction :info='info'/>
@@ -74,6 +74,10 @@ export default {
   font-size: 0.4rem;
   .van-image {
     width: 100%;
+    height:10rem ;
+    img{
+      width: 100%;
+    }
   }
 }
 </style>

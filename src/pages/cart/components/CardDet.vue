@@ -11,7 +11,7 @@
             :price="price(item.good_info.price)"
             :desc="item.good_info.desc"
             :title="item.good_info.name"
-            :thumb="item.good_info.img"
+            :thumb='`http://localhost:9999${item.good_info.img}`' 
           >
             <template #tags>
               <van-tag plain type="danger">标签</van-tag>

@@ -1,7 +1,7 @@
 <template>
   <div class="gooditem" @click="jump(item)">
     <div>
-      <van-image :src="item.img" />
+      <van-image :src="`http://localhost:9999${item.img}`" />
       <div v-text="item.name"></div>
       <div>{{ item.price | Rmb }}</div>
     </div>
@@ -12,12 +12,12 @@
 export default {
   props: {
     item: { type: Object, default: () => {} },
-  },  
+  },
   methods: {
     jump(item) {
       // const {name,img,price} = item
-      const id = item._id
-      this.$router.push({ name: 'info', query: {id}}) 
+      const id = item._id;
+      this.$router.push({ name: "info", query: { id } });
     },
   },
 };
@@ -39,7 +39,11 @@ export default {
     border-radius: 0.2667rem;
   }
   .van-image {
-    width: 100%;
+    width: 4.5333rem;
+    height: 4.5333rem;
+    img {
+      width: 100%;
+    }
   }
 }
 </style>
